@@ -10,6 +10,8 @@ function getRandomHexColor() {
 }
 
 
+startBtn.addEventListener('click', onStartGenerateColor);
+stopBtn.addEventListener('click', onStopGenerateColor);
 
 function onStartGenerateColor() {
     generateId = setInterval(() => bodyEl.style.backgroundColor = getRandomHexColor(), 1000);
@@ -23,6 +25,3 @@ function onStopGenerateColor() {
     stopBtn.disabled = true;
   
 };
-
-startBtn.addEventListener('click', onStartGenerateColor);
-stopBtn.addEventListener('click', onStopGenerateColor);
